@@ -35,6 +35,7 @@ const SearchBar = ({ spaceXdata, setResults }) => {
             <FontAwesomeIcon icon={faMagnifyingGlass} id="search-icon" />
 
             <input
+            name="searchLaunch"
                 type="search"
                 placeholder="Search here"
                 onChange={handleChange}

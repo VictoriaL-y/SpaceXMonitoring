@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import LaunchCard from "./LaunchCard";
 
-const Launches = ({ spaceXdata, setSpaceXdata }) => {
+const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
 
     const url = "https://api.spacexdata.com/latest/launches";
 
@@ -25,12 +25,17 @@ const Launches = ({ spaceXdata, setSpaceXdata }) => {
 
 
     return (
-        <>         
-            {spaceXdata.length > 0 &&
-                    spaceXdata.map(data => (
-                        <LaunchCard data={data} key={data.id} />
-                    ))
-                }
+        <>
+            {spaceXdata.length > 0 && filterButtonResult.length > 0 &&
+                filterButtonResult.map(data => (
+                    <LaunchCard data={data} key={data.id} />
+                ))}
+            
+            {spaceXdata.length > 0 && filterButtonResult.length === 0 &&
+                spaceXdata.map(data => (
+                    <LaunchCard data={data} key={data.id} />
+                ))
+            }
         </>
     )
 };
