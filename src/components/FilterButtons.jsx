@@ -40,7 +40,7 @@ const FilterButtons = ({ spaceXdata, setResults }) => {
     }
 
     return (
-        <div className="row container-fluid p-0 m-0">
+        <div className="row container-fluid p-0 m-0 row-buttons">
             <div className="col-lg-2"></div>
 
             {buttonsInfo.map((button, id) => {
