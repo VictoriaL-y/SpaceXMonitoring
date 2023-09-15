@@ -10,9 +10,9 @@ import './App.css';
 const App = () => {
   const [spaceXdata, setSpaceXdata] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-
   const [searchBarResults, setSearchBarResults] = useState([]);
   const [filterButtonResult, setFilterButtonResult] = useState([]);
+  const [isFocused, setIsFocused] = useState(false);
 
   return (
     <div className="App">
@@ -23,7 +23,9 @@ const App = () => {
           setSearchBarResults={setSearchBarResults}
           setResults={setFilterButtonResult}
           searchInput={searchInput}
-          setSearchInput={setSearchInput} />
+          setSearchInput={setSearchInput}
+          setIsFocused={setIsFocused}
+          isFocused={isFocused} />
         {searchBarResults.length > 0 &&
           <SearchResultsList 
           results={searchBarResults} 
@@ -32,7 +34,10 @@ const App = () => {
           setSearchInput={setSearchInput} />}
       </CheckClickOutside>
 
-      <FilterButtons spaceXdata={spaceXdata} setResults={setFilterButtonResult} />
+      <FilterButtons 
+      spaceXdata={spaceXdata}
+      setResults={setFilterButtonResult}
+      isFocused={isFocused} />
 
       <div className="row container-fluid p-0 m-0 launch-results">
 

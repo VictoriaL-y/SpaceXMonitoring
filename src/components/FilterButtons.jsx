@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./FilterButtons.css"
 
-const FilterButtons = ({ spaceXdata, setResults }) => {
+const FilterButtons = ({ spaceXdata, setResults, isFocused }) => {
 
     const buttonsInfo = [
         {
@@ -25,15 +25,14 @@ const FilterButtons = ({ spaceXdata, setResults }) => {
 
     // for styling buttons
     const [buttonsToggleInfo, setButtonsToggleInfo] = useState(buttonsInfo);
-    // const [buttonText, setButtonText] = useState("");
-
+    
     const toggleButton = (buttonText) => {
-        // let newButtonsArr = [];
         if (buttonText && buttonsToggleInfo.length > 0) {
             console.log(buttonText)
 
             const newButtonsArr = buttonsToggleInfo.map(button => {
                 if (button.text === buttonText) {
+                    console.log(isFocused + " I dooontknow")
                     return (
                         {
                             "text": button.text,
@@ -55,11 +54,6 @@ const FilterButtons = ({ spaceXdata, setResults }) => {
         }
 
     }
-
-    // const handleClick = (e) => {
-    //     e.preventDefault();
-    //     toggleButton(e.target.value)
-    // }
 
     const getFilteredData = (text) => {
 
@@ -89,7 +83,7 @@ const FilterButtons = ({ spaceXdata, setResults }) => {
             {buttonsToggleInfo.map((button, id) => {
                 return <button
                     key={id}
-                    className={`col-lg-2 filterButton ${button.active}`}
+                    className={`col-lg-2 filterButton ${!isFocused && button.active}`}
                     value={button.text}
                     onClick={() => {
                         getFilteredData(button.text);
