@@ -14,12 +14,13 @@ const App = () => {
 
 
 
+
   return (
     <div className="App">
       <h1 className="text-center">SpaceX Monitoring</h1>
 
       <SearchBar spaceXdata={spaceXdata} setResults={setSearchBarResults}/>
-      {searchBarResults.length > 0 && <SearchResultsList results={searchBarResults}/>}
+      {searchBarResults.length > 0 && <SearchResultsList results={searchBarResults} setResults={setFilterButtonResult} setSearchBarResults={setSearchBarResults}/>}
 
     <FilterButtons spaceXdata={spaceXdata} setResults={setFilterButtonResult}/>
 

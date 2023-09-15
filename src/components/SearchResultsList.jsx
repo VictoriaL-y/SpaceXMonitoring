@@ -1,23 +1,31 @@
 import React from "react";
 import "./SearchResultsList.css";
+import CheckClickOutside from "./CheckClickOutside";
 
-const SearchResultsList = (results) => {
+const SearchResultsList = ({results, setResults, setSearchBarResults}) => {
+    
     return (
+        <CheckClickOutside onClickOutside={() => setSearchBarResults([])}>
 
         <div className="results-list">
+            
 
-            {results.results.map((result) => {
-                console.log(result)
+            {results.map((result) => {
                 return (
                     <div key={result.id} className="search-result"
-                        onClick={() => alert(`You clicked on ${result.name}`)}
+                        onClick={() => {
+                            setResults([result]);
+                            setSearchBarResults([]);
+                        }}
                     >
                         {result.name + ": " + result.date_utc.slice(0, 10)}
                     </div>
                 )
+                
             })}
 
         </div>
+        </CheckClickOutside>
 
     )
 }
