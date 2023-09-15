@@ -11,9 +11,9 @@ const Launches = ({ spaceXdata, setSpaceXdata }) => {
             try {
                 await fetch(url, { method: "GET" })
                     .then(response => response.json())
-                    .then(response => {
-                        setSpaceXdata(response);
-                        console.log(response);
+                    .then(res => {
+                        setSpaceXdata(res);
+                        console.log(res);
                     });
             }
             catch (err) {
@@ -21,7 +21,6 @@ const Launches = ({ spaceXdata, setSpaceXdata }) => {
             }
         };
         dataFetch();
-
     }, []);
 
 
