@@ -23,10 +23,9 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult, searchResult 
         dataFetch();
     }, []);
 
-
     return (
         <>
-            {filterButtonResult.length > 0 &&
+            {filterButtonResult.length > 0 && filterButtonResult[0] !== "false" &&
                 filterButtonResult.map(data => (
                     <LaunchCard data={data} key={data.id} />
                 ))}
@@ -35,6 +34,10 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult, searchResult 
                 spaceXdata.map(data => (
                     <LaunchCard data={data} key={data.id} />
                 ))
+            }
+
+            {filterButtonResult.length === 1 && filterButtonResult[0] === "false" &&
+                    <div>"Nothing was found"</div>    
             }
         </>
     )

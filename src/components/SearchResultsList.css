@@ -1,7 +1,7 @@
 .results-list {
-    width: calc(8vw + 200px);
+    width: calc(60vw + 100px);
     min-width: 300px;
-    max-width: 400px;
+    max-width: 700px;
     background-color: red;
     display: flex;
     flex-direction: column;

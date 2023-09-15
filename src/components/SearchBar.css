@@ -1,8 +1,8 @@
 .input-wrapper {
     background-color: white;
-    width: calc(8vw + 200px);
+    width: calc(60vw + 100px);
     min-width: 300px;
-    max-width: 400px;
+    max-width: 700px;
     /* margin: 0px auto 0px auto; */
     position: absolute;
     left: 50%;
@@ -19,7 +19,7 @@
 
 input {
     background-color: transparent;
-    width: calc(8vw + 200px);
+    width: calc(60vw + 100px);
     border: none;
     height: 100%;
     font-size: 1.25rem;
@@ -32,4 +32,16 @@ input:focus {
 
 #search-icon {
     color: royalblue;
+}
+
+.input-wrapper button.displayed {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    font-size: 1.25rem;
+    color: royalblue;
+}
+
+.input-wrapper button.notDisplayed {
+    display: none;
 }
