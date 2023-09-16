@@ -5,7 +5,6 @@ import SearchBar from './components/SearchBar';
 import SearchResultsList from './components/SearchResultsList';
 import FilterButtons from './components/FilterButtons';
 import CheckClickOutside from "./components/CheckClickOutside";
-import './App.css';
 
 const App = () => {
   const [spaceXdata, setSpaceXdata] = useState([]);

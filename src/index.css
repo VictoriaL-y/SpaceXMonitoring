@@ -3,8 +3,24 @@
   margin: 0px;
   padding: 0px;
 }
+.App {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url("https://res.cloudinary.com/devqm7qmb/image/upload/v1694816458/jack-b-bOfCH9TnRg4-unsplash_ulgbrq.jpg");
+  background-size: auto; 
+  background-repeat: repeat;
+}
+
+.App img {
+  width: 20rem;
+  max-width: 150px;
+  /* padding: 10px; */
+  margin: 10px;
+  background-color: transparent;
+}
 
 .spaceX-title {
+  color: #ededed;
   padding-top: 2rem;
   padding-bottom: 6rem;
 }
@@ -12,6 +28,10 @@
 .launch-results, .row-buttons {
   /* position: absolute; */
   /* top: 10%; */
-  background-color: red;
+  background-color: transparent;
+}
+
+.card {
+  margin: 1rem;
 }
 

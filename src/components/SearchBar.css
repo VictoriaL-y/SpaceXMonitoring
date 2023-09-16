@@ -34,7 +34,7 @@ input:focus {
     color: royalblue;
 }
 
-.input-wrapper button.displayed {
+.input-wrapper button {
     background-color: transparent;
     border: none;
     width: fit-content;

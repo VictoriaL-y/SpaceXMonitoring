@@ -7,7 +7,7 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused }) => {
     const buttonsInfo = [
         {
             text: "All",
-            active: "false"
+            active: "true"
         },
         {
             text: "Successful",
@@ -31,7 +31,7 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused }) => {
             console.log(buttonText)
 
             const newButtonsArr = buttonsToggleInfo.map(button => {
-                if (button.text === buttonText) {
+                if (button.text === buttonText && !isFocused) {
                     console.log(isFocused + " I dooontknow")
                     return (
                         {

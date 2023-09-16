@@ -64,14 +64,14 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
             <input
                 id="searchLaunch"
                 name="searchLaunch"
-                placeholder="Search here"
+                placeholder="Search here..."
                 onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 value={searchInput} />
 
-            <button onClick={onRemove} className={!searchInput ? "notDisplayed" : "displayed"}>
+            <button onClick={onRemove} className={!searchInput ? "notDisplayed" : null}>
                 <FontAwesomeIcon icon={faXmark} />
             </button>
 
