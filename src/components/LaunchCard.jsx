@@ -18,6 +18,7 @@ const LaunchCard = ({ data }) => {
     return (
         <div className="card">
             <div className="row">
+                <div className="col-1"></div>
                 <div className="col-4">
                     <div>
 
@@ -26,11 +27,12 @@ const LaunchCard = ({ data }) => {
 
                     </div>
                 </div>
-                <div className="col-8">
+                <div className="col-6 launch-info">
                     <h1>{data.name}</h1>
                     <p>{data.flight_number}</p>
                     <p>{changeTimeFormat(data.date_utc)}</p>
                 </div>
+                <div className="col-1"></div>
 
             </div>
 

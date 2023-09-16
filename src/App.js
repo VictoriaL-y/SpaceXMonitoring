@@ -46,8 +46,8 @@ const App = () => {
 
       <div className="row container-fluid p-0 m-0 launch-results">
 
-        <div className="col-sm-1 col-lg-2"></div>
-        <div id="launches-list" className="col-xs-12 col-sm-10 col-lg-8 container-fluid p-0">
+        <div className="col-sm-1 col-lg-3"></div>
+        <div id="launches-list" className="col-xs-12 col-sm-10 col-lg-6 container-fluid p-0">
 
           <Launches 
           spaceXdata={spaceXdata} 
@@ -57,7 +57,7 @@ const App = () => {
           enterClicked={enterClicked} />
 
         </div>
-        <div className="col-sm-1 col-lg-2"></div>
+        <div className="col-sm-1 col-lg-3"></div>
       </div>
 
     </div>

@@ -1,9 +1,11 @@
-button {
+button.filterButton {
     background-color: transparent;
     color: #ededed;
     z-index: 0;
+    border: 1px solid #504e4e;
+    box-shadow: 2px 2px 2px #747789;
 }
 
-button.true {
+button.filterButton.true {
     background-color: rgb(26, 51, 115);
 }
