@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchResultsList.css";
 
-const SearchResultsList = ({results, setResults, setSearchBarResults, setSearchInput, setEnterClicked}) => {
+const SearchResultsList = ({ results, setResults, setSearchBarResults, setSearchInput, setEnterClicked }) => {
 
     return (
 

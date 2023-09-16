@@ -4,10 +4,6 @@
     padding-top: 20px;
 }
 
-/* .launch-info {
-    margin: auto 0px auto 10px;
-} */
-
 .center {
     display: flex;
     align-items: center;
@@ -17,6 +13,7 @@
 img {
     width: 20rem;
     max-width: 150px;
+    max-height: 150px;
     background-color: transparent;
     margin: 15px 0px 15px 20px;
 }
@@ -55,8 +52,8 @@ img {
 .launch-info a:hover,
 .launch-info a:focus,
 .launch-info a:active {
-color: white;
-background-color: rgb(44, 81, 174);
+    color: white;
+    background-color: rgb(44, 81, 174);
 }
 
 @media screen and (max-width: 991px) {
@@ -67,7 +64,6 @@ background-color: rgb(44, 81, 174);
         justify-content: center;
         font-size: 1.25rem;
         text-align: center;
-        /* padding: 5px; */
     }
 
     .launch-info h3 {

@@ -8,13 +8,7 @@ const ButtonToTop = () => {
 
     useEffect(() => {
         const handleScrollButtonVisibility = () => {
-            // window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
-            if(window.scrollY > 300) {
-                setShowButton(true);
-                console.log("hhhhhhii");
-            } else {
-                setShowButton(false)
-            }
+            window.scrollY > 300 ? setShowButton(true) : setShowButton(false);
         };
 
         window.addEventListener('scroll', handleScrollButtonVisibility);
@@ -24,18 +18,17 @@ const ButtonToTop = () => {
     }, []);
 
     const handleScrollToTop = () => {
-        window.scrollTo({top: 0, behavior: "smooth"});
+        window.scrollTo({ top: 0, behavior: "smooth" });
     }
     return (
         <>
-{console.log(showButton)}
             {showButton && (
                 <div className="scrollToTop">
                     <button
                         className="buttonToTop"
                         onClick={handleScrollToTop}
                     >
-                    <FontAwesomeIcon icon={faArrowUp} />
+                        <FontAwesomeIcon icon={faArrowUp} />
                     </button>
                 </div>
             )}

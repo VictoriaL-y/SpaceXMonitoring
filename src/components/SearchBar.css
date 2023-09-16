@@ -3,7 +3,6 @@
     width: calc(60vw + 100px);
     min-width: 300px;
     max-width: 700px;
-    /* margin: 0px auto 0px auto; */
     position: absolute;
     left: 50%;
     top: 7rem;
@@ -31,7 +30,7 @@ input:focus {
 }
 
 #search-icon {
-    color: royalblue;
+    color: rgb(70, 100, 178);
 }
 
 .input-wrapper button {
@@ -39,7 +38,11 @@ input:focus {
     border: none;
     width: fit-content;
     font-size: 1.25rem;
-    color: royalblue;
+    color: rgb(70, 100, 178);
+}
+
+.input-wrapper button:hover {
+    color: rgb(26, 51, 115);
 }
 
 .input-wrapper button.notDisplayed {

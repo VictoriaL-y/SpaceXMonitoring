@@ -13,8 +13,7 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
                 await fetch(url, { method: "GET" })
                     .then(response => response.json())
                     .then(res => {
-                        setSpaceXdata(res);
-                        console.log(res);
+                        setSpaceXdata(res.reverse());
                     });
             }
             catch (err) {

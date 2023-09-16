@@ -27,7 +27,6 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
 
     const toggleButton = (buttonText) => {
         if (buttonText && buttonsToggleInfo.length > 0) {
-            console.log(buttonText)
 
             const newButtonsArr = buttonsToggleInfo.map(button => {
                 if (button.text === buttonText) {
@@ -72,12 +71,12 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
     }
 
     useEffect(() => {
-        if(isFocused) {
+        if (isFocused) {
             toggleButton(buttonsInfo[0].text);
             setResults(spaceXdata);
             setEnterClicked(false);
         }
-        
+
     }, [isFocused]);
 
     return (

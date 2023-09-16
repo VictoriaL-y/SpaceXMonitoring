@@ -42,7 +42,7 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
                 setResults(searchResults);
             }
             setSearchBarResults([]);
-            
+
             searchInput ? setEnterClicked(true) : setEnterClicked(false);
         }
     }

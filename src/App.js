@@ -29,38 +29,38 @@ const App = () => {
           isFocused={isFocused}
           setEnterClicked={setEnterClicked} />
         {searchBarResults.length > 0 &&
-          <SearchResultsList 
-          results={searchBarResults} 
-          setResults={setFilterButtonResult} 
-          setSearchBarResults={setSearchBarResults}
-          setSearchInput={setSearchInput}
-          setEnterClicked={setEnterClicked} />}
+          <SearchResultsList
+            results={searchBarResults}
+            setResults={setFilterButtonResult}
+            setSearchBarResults={setSearchBarResults}
+            setSearchInput={setSearchInput}
+            setEnterClicked={setEnterClicked} />}
       </CheckClickOutside>
 
-      <FilterButtons 
-      spaceXdata={spaceXdata}
-      setResults={setFilterButtonResult}
-      isFocused={isFocused}
-      enterClicked={enterClicked}
-      setEnterClicked={setEnterClicked}
-      setSearchInput={setSearchInput} />
+      <FilterButtons
+        spaceXdata={spaceXdata}
+        setResults={setFilterButtonResult}
+        isFocused={isFocused}
+        enterClicked={enterClicked}
+        setEnterClicked={setEnterClicked}
+        setSearchInput={setSearchInput} />
 
       <div className="row container-fluid p-0 m-0 launch-results">
 
         <div className="col-sm-1 col-lg-3"></div>
         <div id="launches-list" className="col-xs-12 col-sm-10 col-lg-6 container-fluid p-0">
 
-          <Launches 
-          spaceXdata={spaceXdata} 
-          setSpaceXdata={setSpaceXdata} 
-          filterButtonResult={filterButtonResult}
-          searchInput={searchInput}
-          enterClicked={enterClicked} />
+          <Launches
+            spaceXdata={spaceXdata}
+            setSpaceXdata={setSpaceXdata}
+            filterButtonResult={filterButtonResult}
+            searchInput={searchInput}
+            enterClicked={enterClicked} />
 
         </div>
         <div className="col-sm-1 col-lg-3"></div>
       </div>
-      <ButtonToTop/>
+      <ButtonToTop />
     </div>
   );
 }
