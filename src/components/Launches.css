@@ -4,6 +4,81 @@
     padding-top: 20px;
 }
 
-.launch-info {
+/* .launch-info {
     margin: auto 0px auto 10px;
+} */
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 20rem;
+    max-width: 150px;
+    background-color: transparent;
+    margin: 15px 0px 15px 20px;
+}
+
+.launch-info h3 {
+    padding-top: 10px;
+}
+
+.launch-info .boldString {
+    font-weight: bold;
+}
+
+.launch-info span.successful {
+    color: green;
+}
+
+.launch-info span.upcoming {
+    color: purple;
+}
+
+.launch-info span.failed {
+    color: red;
+}
+
+.launch-info a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0px 5px 0px 0px;
+    border-radius: 5px;
+    background-color: rgb(26, 51, 115);
+    color: #dedede;
+    font-size: 0.8rem;
+}
+
+.launch-info a:hover,
+.launch-info a:focus,
+.launch-info a:active {
+color: white;
+background-color: rgb(44, 81, 174);
+}
+
+@media screen and (max-width: 991px) {
+    .launch-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        text-align: center;
+        /* padding: 5px; */
+    }
+
+    .launch-info h3 {
+        font-size: 2rem;
+    }
+
+    .launch-info p {
+        padding: 0px 20px;
+    }
+
+    .launch-info a {
+        font-size: 1rem;
+    }
 }

@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 .App {
   min-height: 100vh;
@@ -9,24 +10,10 @@
   background-repeat: repeat;
 }
 
-.App img {
-  width: 20rem;
-  max-width: 150px;
-  /* padding: 10px; */
-  margin: 10px;
-  background-color: transparent;
-}
-
 .spaceX-title {
   color: #ededed;
   padding-top: 2rem;
   padding-bottom: 6rem;
-}
-
-.launch-results, .row-buttons {
-  /* position: absolute; */
-  /* top: 10%; */
-  background-color: transparent;
 }
 
 .card {

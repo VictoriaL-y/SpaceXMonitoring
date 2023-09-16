@@ -9,3 +9,9 @@ button.filterButton {
 button.filterButton.true {
     background-color: rgb(26, 51, 115);
 }
+
+@media screen and (max-width: 991px) {
+    button.filterButton {
+        font-size: 1.25rem;
+    }
+}
