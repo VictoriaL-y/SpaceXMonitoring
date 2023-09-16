@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar';
 import SearchResultsList from './components/SearchResultsList';
 import FilterButtons from './components/FilterButtons';
 import CheckClickOutside from "./components/CheckClickOutside";
+import ButtonToTop from './components/ButtonToTop';
 
 const App = () => {
   const [spaceXdata, setSpaceXdata] = useState([]);
@@ -59,7 +60,7 @@ const App = () => {
         </div>
         <div className="col-sm-1 col-lg-3"></div>
       </div>
-
+      <ButtonToTop/>
     </div>
   );
 }

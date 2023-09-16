@@ -9,8 +9,6 @@ const LaunchCard = ({ data }) => {
         let exactTime = date.slice(16, 21);
 
         const fullDate = weekDay + ", " + mainDate + " at " + exactTime;
-
-        console.log(fullDate);
         
         return fullDate;
     }

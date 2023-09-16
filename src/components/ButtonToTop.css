@@ -1,0 +1,12 @@
+button.buttonToTop {
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    font-size: 3rem;
+    color:rgb(214, 219, 231);
+    background-color: transparent;
+    border: none;
+    z-index: 101;
+    padding: 4px;
+    cursor: pointer;
+}
