@@ -1,12 +1,70 @@
-# Getting Started with Create React App
+# SpaceXMonitoring project documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preface
+
+This project is a Responsive Web FrontEnd project, created with the purpose of presenting the data from the public API https://github.com/r-spacex/SpaceX-API
+which contains information about real SpaceX launches.
+
+The project is already hosted on Github pages and can be accesses here: **https://VictoriaL-y.github.io/SpaceXMonitoring**
+
+## Details
+
+* Being a Responsive Web Application, the project adapts to different screen sized and is optimised for mobile use.
+
+* The project fetches all available launches data from the API endpoint.
+
+* Then the data is displayed on a web page, which includes a SearchBar, Filter Buttons and a list of launches with an image for each launch and certain information such as status, date and links.
+
+* The Search works by the name and/or date of each launch.
+Upon pressing on the SearchBar the user is presented with a smaller scrollable list of possible "search terms" which are real launch details from the API data.
+
+* The Filter Buttons represent the different launch states such as "Successful", "Upcoming" and "Failed". The "All" filter disables other filters and clears the Searchbar.
+
+* Using both a "search term" and a filter is not supported at the moment.
+
+* **React.js** is the main UI framework used for writing the project.
+
+* The **Bootstrap** framework is used for the structuring of the web page and setting of CSS rules.
+  
+* The **Font Awesome** free service is used for providing icons.
+
+* The **Cloudinary** service is used for getting pre-saved images for greated efficiency, providing control over the quality of the images.
+
+## Install depencencies & Run the project locally
+
+Clone the repository with `git clone RepoUrl` to your local machine, then open a terminal in the folder or open in the IDE of choice (e.g. VSCode)
+
+### Node package manager
+
+Using the terminal, first install dependencies with
+
+`npm install`
+
+### Bootstrap
+
+To install Bootstrap
+
+`npm install bootstrap`
+
+### Font Awesome
+
+To install Font Awesome
+
+`npm i --save @fortawesome/fontawesome-svg-core`
+
+`npm i --save @fortawesome/free-solid-svg-icons`
+
+`npm i --save @fortawesome/free-regular-svg-icons`
+
+`npm i --save @fortawesome/free-brands-svg-icons`
+
+`npm i --save @fortawesome/react-fontawesome@latest`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +72,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+`npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

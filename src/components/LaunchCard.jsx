@@ -32,7 +32,7 @@ const LaunchCard = ({ data }) => {
                                 : <span className="failed">failed</span>}
                     </p>
                     <p>
-                        <a href={`https://www.youtube.com/watch?v=${data.links.youtube_id}`} target="_blank">Youtube</a>
+                        {data.links.youtube_id && <a href={`https://www.youtube.com/watch?v=${data.links.youtube_id}`} target="_blank">Youtube</a>}
                         {data.links.wikipedia && <a href={data.links.wikipedia} target="_blank">Wikipedia</a>}
                         {data.links.reddit.launch && <a href={data.links.reddit.launch} target="_blank">Reddit</a>}
                     </p>
