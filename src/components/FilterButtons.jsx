@@ -81,12 +81,12 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
 
     return (
         <div className="row container-fluid p-0 m-0 row-buttons">
-            <div className="col-2 col-lg-4"></div>
+            <div className="col-lg-4"></div>
 
             {buttonsToggleInfo.map((button, id) => {
                 return <button
                     key={id}
-                    className={`col-2 col-lg-1 filterButton ${!enterClicked && button.active}`}
+                    className={`col-lg-1 filterButton ${!enterClicked && button.active}`}
                     value={button.text}
                     onClick={() => {
                         getFilteredData(button.text);
@@ -101,7 +101,7 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
 
             })}
 
-            <div className="col-2 col-lg-4"></div>
+            <div className="col-lg-4"></div>
         </div>
     )
 }
