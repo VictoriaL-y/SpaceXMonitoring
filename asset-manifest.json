@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SpaceXMonitoring/static/css/main.acb700bb.css",
+    "main.js": "/SpaceXMonitoring/static/js/main.837c745a.js",
+    "index.html": "/SpaceXMonitoring/index.html",
+    "main.acb700bb.css.map": "/SpaceXMonitoring/static/css/main.acb700bb.css.map",
+    "main.837c745a.js.map": "/SpaceXMonitoring/static/js/main.837c745a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.acb700bb.css",
+    "static/js/main.837c745a.js"
+  ]
+}
