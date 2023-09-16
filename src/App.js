@@ -40,7 +40,8 @@ const App = () => {
       setResults={setFilterButtonResult}
       isFocused={isFocused}
       enterClicked={enterClicked}
-      setEnterClicked={setEnterClicked} />
+      setEnterClicked={setEnterClicked}
+      setSearchInput={setSearchInput} />
 
       <div className="row container-fluid p-0 m-0 launch-results">
 

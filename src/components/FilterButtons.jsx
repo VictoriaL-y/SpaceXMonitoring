@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./FilterButtons.css"
 
-const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnterClicked }) => {
+const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnterClicked, setSearchInput }) => {
 
     const buttonsInfo = [
         {
@@ -91,7 +91,8 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
                     value={button.text}
                     onClick={() => {
                         getFilteredData(button.text);
-                        toggleButton(button.text)
+                        toggleButton(button.text);
+                        setSearchInput("");
                     }
                     }
                 >
