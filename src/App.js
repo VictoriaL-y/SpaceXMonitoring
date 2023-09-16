@@ -12,6 +12,7 @@ const App = () => {
   const [searchBarResults, setSearchBarResults] = useState([]);
   const [filterButtonResult, setFilterButtonResult] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
+  const [enterClicked, setEnterClicked] = useState(false);
 
   return (
     <div className="App">
@@ -24,7 +25,8 @@ const App = () => {
           searchInput={searchInput}
           setSearchInput={setSearchInput}
           setIsFocused={setIsFocused}
-          isFocused={isFocused} />
+          isFocused={isFocused}
+          setEnterClicked={setEnterClicked} />
         {searchBarResults.length > 0 &&
           <SearchResultsList 
           results={searchBarResults} 
@@ -36,7 +38,9 @@ const App = () => {
       <FilterButtons 
       spaceXdata={spaceXdata}
       setResults={setFilterButtonResult}
-      isFocused={isFocused} />
+      isFocused={isFocused}
+      enterClicked={enterClicked}
+      setEnterClicked={setEnterClicked} />
 
       <div className="row container-fluid p-0 m-0 launch-results">
 

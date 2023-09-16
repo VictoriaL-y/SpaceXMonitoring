@@ -3,14 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 import "./SearchBar.css";
 
-const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, setSearchInput, setIsFocused }) => {
+const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, setSearchInput, setIsFocused, setEnterClicked }) => {
 
     const [searchResults, setSearchResults] = useState([]);
 
     const getFilteredData = (value) => {
         if (spaceXdata.length > 0) {
             const results = spaceXdata.filter((launch) => {
-                console.log(value !== "")
                 return (
                     value &&
                     launch &&
@@ -36,7 +35,6 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
-            console.log(searchResults)
             if (searchResults.length === 0) {
                 console.log("Nothing was found");
                 setResults(["false"]);
@@ -44,6 +42,7 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
                 setResults(searchResults);
             }
             setSearchBarResults([]);
+            setEnterClicked(true);
         }
     }
 
@@ -52,10 +51,6 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
         setSearchBarResults([])
         setResults(spaceXdata);
     }
-
-//     useEffect(() => {
-//         console.log('isFocused: ', isFocused);
-// }, [isFocused]);
 
     return (
         <div className="input-wrapper">
