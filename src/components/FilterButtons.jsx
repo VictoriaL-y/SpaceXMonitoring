@@ -93,6 +93,7 @@ const FilterButtons = ({ spaceXdata, setResults, isFocused, enterClicked, setEnt
                         getFilteredData(button.text);
                         toggleButton(button.text);
                         setSearchInput("");
+                        setEnterClicked(false);
                     }
                     }
                 >

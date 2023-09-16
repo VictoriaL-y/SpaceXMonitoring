@@ -32,7 +32,8 @@ const App = () => {
           results={searchBarResults} 
           setResults={setFilterButtonResult} 
           setSearchBarResults={setSearchBarResults}
-          setSearchInput={setSearchInput} />}
+          setSearchInput={setSearchInput}
+          setEnterClicked={setEnterClicked} />}
       </CheckClickOutside>
 
       <FilterButtons 
@@ -48,7 +49,12 @@ const App = () => {
         <div className="col-sm-1 col-lg-2"></div>
         <div id="launches-list" className="col-xs-12 col-sm-10 col-lg-8 container-fluid p-0">
 
-          <Launches spaceXdata={spaceXdata} setSpaceXdata={setSpaceXdata} filterButtonResult={filterButtonResult} />
+          <Launches 
+          spaceXdata={spaceXdata} 
+          setSpaceXdata={setSpaceXdata} 
+          filterButtonResult={filterButtonResult}
+          searchInput={searchInput}
+          enterClicked={enterClicked} />
 
         </div>
         <div className="col-sm-1 col-lg-2"></div>

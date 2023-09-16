@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchResultsList.css";
 
-const SearchResultsList = ({results, setResults, setSearchBarResults, setSearchInput}) => {
+const SearchResultsList = ({results, setResults, setSearchBarResults, setSearchInput, setEnterClicked}) => {
 
     return (
 
@@ -13,7 +13,8 @@ const SearchResultsList = ({results, setResults, setSearchBarResults, setSearchI
                         onClick={() => {
                             setResults([result]);
                             setSearchBarResults([]);
-                            setSearchInput(`${result.name}: ${result.date_utc.slice(0, 10)}`)
+                            setSearchInput(`${result.name}: ${result.date_utc.slice(0, 10)}`);
+                            setEnterClicked(true);
                         }}
                     >
                         {result.name + ": " + result.date_utc.slice(0, 10)}

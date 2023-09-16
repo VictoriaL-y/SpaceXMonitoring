@@ -1,0 +1,10 @@
+/* .search-results {
+    color: #ededed;
+    font-size: 2rem;
+} */
+
+.found-nothing {
+    font-size: 1.5rem;
+    color: rgb(197, 95, 95);
+    padding-top: 20px;
+}

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import LaunchCard from "./LaunchCard";
+import "./Launches.css";
 
-const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult, searchResult }) => {
+const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
 
     const url = "https://api.spacexdata.com/latest/launches";
 
@@ -37,7 +38,7 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult, searchResult 
             }
 
             {filterButtonResult.length === 1 && filterButtonResult[0] === "false" &&
-                    <div>"Nothing was found"</div>    
+                <p className="found-nothing text-center">Nothing was found</p>
             }
         </>
     )
