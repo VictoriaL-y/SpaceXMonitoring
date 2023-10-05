@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SpaceXMonitoring/static/css/main.acb700bb.css",
-    "main.js": "/SpaceXMonitoring/static/js/main.de2bdbbd.js",
+    "main.js": "/SpaceXMonitoring/static/js/main.b50fe877.js",
     "index.html": "/SpaceXMonitoring/index.html",
     "main.acb700bb.css.map": "/SpaceXMonitoring/static/css/main.acb700bb.css.map",
-    "main.de2bdbbd.js.map": "/SpaceXMonitoring/static/js/main.de2bdbbd.js.map"
+    "main.b50fe877.js.map": "/SpaceXMonitoring/static/js/main.b50fe877.js.map"
   },
   "entrypoints": [
     "static/css/main.acb700bb.css",
-    "static/js/main.de2bdbbd.js"
+    "static/js/main.b50fe877.js"
   ]
 }
