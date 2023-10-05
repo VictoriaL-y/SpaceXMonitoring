@@ -59,7 +59,11 @@ const SearchBar = ({ spaceXdata, setSearchBarResults, setResults, searchInput, s
                 setResults(["false"]);
                 setIsActive(false);
 
-                // get the search's result
+            // if we have already chosed the search result from the dropdown menu
+            } else if (searchInput.split(": ").length === 2) {
+                setIsActive(false);
+
+            // get the search's result
             } else {
                 setResults(searchResults);
                 setIsActive(false);
