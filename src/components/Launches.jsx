@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import LaunchCard from "./LaunchCard";
 import "./Launches.css";
 
-const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
+const Launches = ({ spaceXdata, setSpaceXdata, filterResult }) => {
 
     const url = "https://api.spacexdata.com/latest/launches";
 
@@ -13,6 +13,7 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
                 await fetch(url, { method: "GET" })
                     .then(response => response.json())
                     .then(res => {
+                        // reverse to get a list, starting with the most recent launches
                         setSpaceXdata(res.reverse());
                     });
             }
@@ -25,18 +26,20 @@ const Launches = ({ spaceXdata, setSpaceXdata, filterButtonResult }) => {
 
     return (
         <>
-            {filterButtonResult.length > 0 && filterButtonResult[0] !== "false" &&
-                filterButtonResult.map(data => (
+            {/* if the search or filtering was successful */}
+            {filterResult.length > 0 && filterResult[0] !== "false" &&
+                filterResult.map(data => (
                     <LaunchCard data={data} key={data.id} />
                 ))}
-
-            {spaceXdata.length > 0 && filterButtonResult.length === 0 &&
+                
+            {/* default results, all the launches. They are also shown if the search was empty */}
+            {spaceXdata.length > 0 && filterResult.length === 0 &&
                 spaceXdata.map(data => (
                     <LaunchCard data={data} key={data.id} />
                 ))
             }
-
-            {filterButtonResult.length === 1 && filterButtonResult[0] === "false" &&
+            {/* in case if nothing was found after the search */}
+            {filterResult.length === 1 && filterResult[0] === "false" &&
                 <p className="found-nothing text-center">Nothing was found</p>
             }
         </>

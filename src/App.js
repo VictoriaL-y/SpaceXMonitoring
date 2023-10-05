@@ -11,39 +11,43 @@ const App = () => {
   const [spaceXdata, setSpaceXdata] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [searchBarResults, setSearchBarResults] = useState([]);
-  const [filterButtonResult, setFilterButtonResult] = useState([]);
+  const [filterResult, setFilterResult] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
-  const [enterClicked, setEnterClicked] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   return (
     <div className="App">
       <h1 className="text-center spaceX-title">SpaceX Monitoring</h1>
 
       <CheckClickOutside onClickOutside={() => setSearchBarResults([])}>
+        
         <SearchBar spaceXdata={spaceXdata}
           setSearchBarResults={setSearchBarResults}
-          setResults={setFilterButtonResult}
+          setResults={setFilterResult}
           searchInput={searchInput}
           setSearchInput={setSearchInput}
           setIsFocused={setIsFocused}
           isFocused={isFocused}
-          setEnterClicked={setEnterClicked} />
-        {searchBarResults.length > 0 &&
+          setIsActive={setIsActive}
+           />
+        
           <SearchResultsList
             results={searchBarResults}
-            setResults={setFilterButtonResult}
+            setResults={setFilterResult}
             setSearchBarResults={setSearchBarResults}
             setSearchInput={setSearchInput}
-            setEnterClicked={setEnterClicked} />}
+            setIsActive={setIsActive} />
+
       </CheckClickOutside>
 
       <FilterButtons
         spaceXdata={spaceXdata}
-        setResults={setFilterButtonResult}
+        setResults={setFilterResult}
         isFocused={isFocused}
-        enterClicked={enterClicked}
-        setEnterClicked={setEnterClicked}
-        setSearchInput={setSearchInput} />
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        isActive={isActive}
+        setIsActive={setIsActive} />
 
       <div className="row container-fluid p-0 m-0 launch-results">
 
@@ -53,9 +57,7 @@ const App = () => {
           <Launches
             spaceXdata={spaceXdata}
             setSpaceXdata={setSpaceXdata}
-            filterButtonResult={filterButtonResult}
-            searchInput={searchInput}
-            enterClicked={enterClicked} />
+            filterResult={filterResult} />
 
         </div>
         <div className="col-sm-1 col-lg-3"></div>

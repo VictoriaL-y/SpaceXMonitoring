@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-// To clean SearchBar results
+// To clean SearchBar results: the dropdown menu will be cleared
 const CheckClickOutside = (props) => {
     const ref = useRef(null);
     const { onClickOutside, children } = props;

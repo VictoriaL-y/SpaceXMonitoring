@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import "./ButtonToTop.css";
 
+// get to the top of the page
 const ButtonToTop = () => {
     const [showButton, setShowButton] = useState(false);
 

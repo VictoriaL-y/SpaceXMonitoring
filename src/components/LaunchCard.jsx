@@ -3,6 +3,7 @@ import "./Launches.css";
 
 const LaunchCard = ({ data }) => {
 
+    // get the date in the format like this: "Tue, Dec 17 2019 at 01:10"
     const changeTimeFormat = (launchDate) => {
         const date = new Date(launchDate).toString();
         let weekDay = date.slice(0, 3);
@@ -36,7 +37,8 @@ const LaunchCard = ({ data }) => {
                         {data.links.wikipedia && <a href={data.links.wikipedia} target="_blank">Wikipedia</a>}
                         {data.links.reddit.launch && <a href={data.links.reddit.launch} target="_blank">Reddit</a>}
                     </p>
-
+                    
+                    {/* write the reason why the launch failed if it failed */}
                     {(data.failures.length > 0)
                         ? <p>
                             <span className="boldString">Reason: </span>{data.failures[0].reason}</p>
